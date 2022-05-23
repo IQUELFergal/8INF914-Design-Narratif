@@ -2,7 +2,6 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
-using UnityEditor;
 
 [RequireComponent(typeof(CompositeCollider2D))]
 public class ShadowCaster2DTileMap : MonoBehaviour
@@ -60,36 +59,4 @@ public class ShadowCaster2DTileMap : MonoBehaviour
         }
 
     }
-
-}
-
-[CustomEditor(typeof(ShadowCaster2DTileMap))]
-public class ShadowCastersGeneratorEditor : Editor
-{
-
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-        ShadowCaster2DTileMap generator = (ShadowCaster2DTileMap)target;
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
-
-
-        if (GUILayout.Button("Generate"))
-        {
-
-            generator.Generate();
-
-        }
-
-        EditorGUILayout.Space();
-        if (GUILayout.Button("Destroy All Children"))
-        {
-
-            generator.DestroyAllChildren();
-
-        }
-    }
-
 }
