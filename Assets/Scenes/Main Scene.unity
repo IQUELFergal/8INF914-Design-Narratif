@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 86187888}
   - component: {fileID: 86187887}
   - component: {fileID: 86187891}
+  - component: {fileID: 86187892}
   m_Layer: 0
   m_Name: EventRaiser Interactable
   m_TagString: Untagged
@@ -311,13 +312,13 @@ MonoBehaviour:
   eventToRaise:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 900568555}
-        m_TargetAssemblyTypeName: DebugInteractable, Assembly-CSharp
-        m_MethodName: Interact
+      - m_Target: {fileID: 86187892}
+        m_TargetAssemblyTypeName: VoiceLineTrigger, Assembly-CSharp
+        m_MethodName: TriggerVoiceLine
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4889789890963384738}
-          m_ObjectArgumentAssemblyTypeName: Interactor, Assembly-CSharp
+          m_ObjectArgument: {fileID: 11400000, guid: 00dda415af938174a891573835310846, type: 2}
+          m_ObjectArgumentAssemblyTypeName: VoiceLine, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -440,6 +441,18 @@ MonoBehaviour:
   m_ShapePathHash: 0
   m_Mesh: {fileID: 2060605406}
   m_InstanceId: 33834
+--- !u!114 &86187892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86187886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9985054a84e2a444b8a6a891ef069c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &132716565
 GameObject:
   m_ObjectHideFlags: 0
@@ -6396,14 +6409,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa44fe12f0c77da4cb124322dd930828, type: 3}
---- !u!114 &4889789890963384738 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4041465321745786114, guid: aa44fe12f0c77da4cb124322dd930828, type: 3}
-  m_PrefabInstance: {fileID: 4889789890963384729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e2fb7583460c243a5bb24faa392107, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
