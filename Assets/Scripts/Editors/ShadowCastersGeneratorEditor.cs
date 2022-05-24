@@ -6,7 +6,7 @@ using UnityEditor;
 public class ShadowCastersGeneratorEditor : Editor
 {
 
-    public new void OnInspectorGUI()
+    public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
         ShadowCaster2DTileMap generator = (ShadowCaster2DTileMap)target;
