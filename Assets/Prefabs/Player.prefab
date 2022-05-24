@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7039896041682890272}
   - component: {fileID: 6873841166756931698}
   - component: {fileID: 4041465321745786114}
+  - component: {fileID: 94668167522519073}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -144,6 +145,14 @@ MonoBehaviour:
     m_Bits: 1
   selectedColliderIndex: 0
   currentInteractableColliders: []
+--- !u!81 &94668167522519073
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889789890530252966}
+  m_Enabled: 1
 --- !u!1 &4889789892252327995
 GameObject:
   m_ObjectHideFlags: 0

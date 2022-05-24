@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
     //Components
     SceneLoader sceneLoader;
     InputManager inputManager;
+    VoiceLineManager voiceLineManager;
 
 
     public GameStateMachine StateMachine { get => stateMachine; }
@@ -26,6 +27,7 @@ public class GameManager : Singleton<GameManager>
 
     public SceneLoader SceneLoader { get => sceneLoader; }
     public InputManager InputManager { get => inputManager; }
+    public VoiceLineManager VoiceLineManager { get => voiceLineManager; }
 
     protected override void Awake()
     {
@@ -34,6 +36,7 @@ public class GameManager : Singleton<GameManager>
         //Components
         sceneLoader = GetComponent<SceneLoader>();
         inputManager = GetComponent<InputManager>();
+        voiceLineManager = GetComponent<VoiceLineManager>();
     }
 
     private void Start()
