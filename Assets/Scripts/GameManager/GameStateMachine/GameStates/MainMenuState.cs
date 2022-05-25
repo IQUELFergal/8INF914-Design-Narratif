@@ -17,6 +17,7 @@ public class MainMenuState : GameState
 
         MainMenu.onOpenMenu?.Invoke();
         GameManager.Instance.InputManager.DisablePlayerInputs();
+        GameManager.Instance.InputManager.Inputs.UI.Cancel.performed += OnPlayInput;
     }
 
     public override void Exit()
@@ -25,6 +26,7 @@ public class MainMenuState : GameState
 
         MainMenu.onCloseMenu?.Invoke();
         GameManager.Instance.InputManager.EnablePlayerInputs();
+        GameManager.Instance.InputManager.Inputs.UI.Cancel.performed -= OnPlayInput;
     }
 
     public override void FixedUpdate()
@@ -40,5 +42,10 @@ public class MainMenuState : GameState
     public override void Update()
     {
         base.Update();
+    }
+
+    void OnPlayInput(InputAction.CallbackContext context)
+    {
+        GameManager.Instance.StateMachine.ChangeState(GameManager.Instance.PlayState);
     }
 }
