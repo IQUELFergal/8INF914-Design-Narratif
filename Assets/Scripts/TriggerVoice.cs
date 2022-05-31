@@ -12,8 +12,11 @@ public class TriggerVoice : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("ontrigger");
-        voice.Play();
+        if (col.gameObject.CompareTag("Player"))
+        { 
+            Debug.Log("ontrigger");
+            voice.Play();
+        }
     }
 }
 
